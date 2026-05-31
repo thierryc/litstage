@@ -1,4 +1,4 @@
-import { attachBrowserHost, createRunner, type LitStageSketch } from "@litsquare/litstage";
+import { attachBrowserHost, attachRenderHost, createRunner, type LitStageSketch } from "@litsquare/litstage";
 import "./styles.css";
 
 const root = document.getElementById("stage");
@@ -38,3 +38,4 @@ attachBrowserHost(runner, {
   loop: true
 });
 
+attachRenderHost(runner);
