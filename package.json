@@ -1,0 +1,16 @@
+{
+  "name": "litstage-workspace",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "pnpm --filter './packages/*' -r build",
+    "build:examples": "pnpm build && pnpm --filter './examples/*' -r build",
+    "check": "pnpm --filter @litsquare/litstage build && pnpm --filter @litsquare/litstage-protocol build && pnpm --filter './packages/*' -r check",
+    "test": "pnpm --filter './packages/*' -r test"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.29",
+    "typescript": "^5.9.0",
+    "vitest": "^3.2.0"
+  }
+}

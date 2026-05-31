@@ -1,0 +1,20 @@
+{
+  "name": "Basic DOM Stage",
+  "sourceEntry": "src/main.ts",
+  "buildDir": "dist",
+  "preview": {
+    "fps": 30,
+    "width": 1280,
+    "height": 720,
+    "durationFrames": 180,
+    "loop": true
+  },
+  "render": {
+    "width": 1280,
+    "height": 720,
+    "fps": 30,
+    "videoOutput": "h264Mp4",
+    "videoMode": "deterministic"
+  }
+}
+
