@@ -1,11 +1,12 @@
 {
-  "name": "litstage-workspace",
+  "name": "litsquare-stage-workspace",
   "private": true,
+  "packageManager": "pnpm@10.29.2",
   "type": "module",
   "scripts": {
     "build": "pnpm --filter './packages/*' -r build",
     "build:examples": "pnpm build && pnpm --filter './examples/*' -r build",
-    "check": "pnpm --filter @litsquare/litstage build && pnpm --filter @litsquare/litstage-protocol build && pnpm --filter './packages/*' -r check",
+    "check": "pnpm --filter @litsquare/stage build && pnpm --filter @litsquare/stage-protocol build && pnpm --filter './packages/*' -r check",
     "test": "pnpm --filter './packages/*' -r test"
   },
   "devDependencies": {

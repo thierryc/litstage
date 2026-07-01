@@ -1,26 +1,26 @@
 import React, { useEffect, useMemo, useRef, type MutableRefObject } from "react";
 import { createRoot } from "react-dom/client";
-import { attachRenderHost } from "@litsquare/litstage";
-import { LitStageProvider, useLitStage, useLitStageFrame } from "@litsquare/litstage-react";
-import type { LitStageSketch } from "@litsquare/litstage";
+import { attachRenderHost } from "@litsquare/stage";
+import { LitSquareStageProvider, useLitSquareStage, useLitSquareStageFrame } from "@litsquare/stage-react";
+import type { LitSquareStageSketch } from "@litsquare/stage";
 import "./styles.css";
 
 function StageReadout() {
-  const frame = useLitStageFrame();
+  const frame = useLitSquareStageFrame();
   return <p>{frame ? `Frame ${frame.frame}` : "Frame 0"}</p>;
 }
 
 function App() {
   const stageRef = useRef<HTMLElement | null>(null);
   const renderHostRef = useRef<{ destroy(): void } | null>(null);
-  const sketch = useMemo<LitStageSketch>(() => ({
+  const sketch = useMemo<LitSquareStageSketch>(() => ({
     renderFrame(ctx, root) {
       root.style.setProperty("--progress", String(ctx.frame / Math.max(ctx.durationFrames - 1, 1)));
     }
   }), []);
 
   return (
-    <LitStageProvider
+    <LitSquareStageProvider
       rootRef={stageRef}
       sketch={sketch}
       initialContext={{ fps: 30, width: 1280, height: 720, durationFrames: 180 }}
@@ -30,12 +30,12 @@ function App() {
         <div className="bar" />
         <StageReadout />
       </main>
-    </LitStageProvider>
+    </LitSquareStageProvider>
   );
 }
 
 function RenderHostBinder({ renderHostRef }: { renderHostRef: MutableRefObject<{ destroy(): void } | null> }) {
-  const { runner } = useLitStage();
+  const { runner } = useLitSquareStage();
 
   useEffect(() => {
     if (!runner || renderHostRef.current) {

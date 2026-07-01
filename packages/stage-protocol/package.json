@@ -1,0 +1,48 @@
+{
+  "name": "@litsquare/stage-protocol",
+  "version": "0.1.0",
+  "description": "Shared LitSquare Stage config, render, and MCP protocol types",
+  "license": "MIT",
+  "type": "module",
+  "keywords": [
+    "litsquare",
+    "stage",
+    "protocol",
+    "rendering",
+    "video",
+    "typescript",
+    "mcp"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thierryc/litstage.git",
+    "directory": "packages/stage-protocol"
+  },
+  "bugs": {
+    "url": "https://github.com/thierryc/litstage/issues"
+  },
+  "homepage": "https://github.com/thierryc/litstage#readme",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": ["dist", "README.md", "LICENSE"],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "check": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.0",
+    "vitest": "^3.2.0"
+  }
+}

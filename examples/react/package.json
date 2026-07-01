@@ -1,5 +1,5 @@
 {
-  "name": "@litsquare/litstage-example-react",
+  "name": "@litsquare/stage-example-react",
   "private": true,
   "type": "module",
   "scripts": {
@@ -7,8 +7,8 @@
     "dev": "vite --host 127.0.0.1"
   },
   "dependencies": {
-    "@litsquare/litstage": "workspace:*",
-    "@litsquare/litstage-react": "workspace:*",
+    "@litsquare/stage": "workspace:*",
+    "@litsquare/stage-react": "workspace:*",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },

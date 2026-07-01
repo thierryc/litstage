@@ -1,4 +1,4 @@
-import { attachBrowserHost, attachRenderHost, createRunner, type LitStageSketch } from "@litsquare/litstage";
+import { attachBrowserHost, attachRenderHost, createRunner, type LitSquareStageSketch } from "@litsquare/stage";
 import "./styles.css";
 
 const root = document.getElementById("stage");
@@ -6,7 +6,7 @@ if (!root) {
   throw new Error("Missing #stage root.");
 }
 
-const sketch: LitStageSketch = {
+const sketch: LitSquareStageSketch = {
   renderFrame(ctx, element) {
     const progress = ctx.durationFrames <= 1 ? 0 : ctx.frame / (ctx.durationFrames - 1);
     element.innerHTML = `

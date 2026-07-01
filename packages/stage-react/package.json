@@ -1,0 +1,56 @@
+{
+  "name": "@litsquare/stage-react",
+  "version": "0.1.0",
+  "description": "React bindings for the LitSquare Stage frame runner",
+  "license": "MIT",
+  "type": "module",
+  "keywords": [
+    "litsquare",
+    "stage",
+    "react",
+    "animation",
+    "video",
+    "frame-rendering",
+    "typescript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thierryc/litstage.git",
+    "directory": "packages/stage-react"
+  },
+  "bugs": {
+    "url": "https://github.com/thierryc/litstage/issues"
+  },
+  "homepage": "https://github.com/thierryc/litstage#readme",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": ["dist", "README.md", "LICENSE"],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "check": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run --passWithNoTests"
+  },
+  "dependencies": {
+    "@litsquare/stage": "workspace:*"
+  },
+  "peerDependencies": {
+    "react": ">=18 <20"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.6",
+    "react": "^19.1.0",
+    "typescript": "^5.9.0",
+    "vitest": "^3.2.0"
+  }
+}

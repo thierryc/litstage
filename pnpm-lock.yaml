@@ -20,9 +20,9 @@ importers:
 
   examples/basic-dom:
     dependencies:
-      '@litsquare/litstage':
+      '@litsquare/stage':
         specifier: workspace:*
-        version: link:../../packages/litstage
+        version: link:../../packages/stage
     devDependencies:
       typescript:
         specifier: ^5.9.0
@@ -33,12 +33,12 @@ importers:
 
   examples/react:
     dependencies:
-      '@litsquare/litstage':
+      '@litsquare/stage':
         specifier: workspace:*
-        version: link:../../packages/litstage
-      '@litsquare/litstage-react':
+        version: link:../../packages/stage
+      '@litsquare/stage-react':
         specifier: workspace:*
-        version: link:../../packages/litstage-react
+        version: link:../../packages/stage-react
       react:
         specifier: ^19.1.0
         version: 19.2.6
@@ -62,7 +62,7 @@ importers:
         specifier: ^6.3.5
         version: 6.4.2(@types/node@22.19.19)
 
-  packages/litstage:
+  packages/stage:
     devDependencies:
       typescript:
         specifier: ^5.9.0
@@ -71,7 +71,7 @@ importers:
         specifier: ^3.2.0
         version: 3.2.4(@types/node@22.19.19)
 
-  packages/litstage-protocol:
+  packages/stage-protocol:
     devDependencies:
       typescript:
         specifier: ^5.9.0
@@ -80,11 +80,11 @@ importers:
         specifier: ^3.2.0
         version: 3.2.4(@types/node@22.19.19)
 
-  packages/litstage-react:
+  packages/stage-react:
     dependencies:
-      '@litsquare/litstage':
+      '@litsquare/stage':
         specifier: workspace:*
-        version: link:../litstage
+        version: link:../stage
     devDependencies:
       '@types/react':
         specifier: ^19.1.6

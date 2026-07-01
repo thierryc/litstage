@@ -1,5 +1,5 @@
 {
-  "name": "@litsquare/litstage-example-basic-dom",
+  "name": "@litsquare/stage-example-basic-dom",
   "private": true,
   "type": "module",
   "scripts": {
@@ -7,7 +7,7 @@
     "dev": "vite --host 127.0.0.1"
   },
   "dependencies": {
-    "@litsquare/litstage": "workspace:*"
+    "@litsquare/stage": "workspace:*"
   },
   "devDependencies": {
     "typescript": "^5.9.0",

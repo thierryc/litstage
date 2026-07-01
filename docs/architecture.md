@@ -1,13 +1,17 @@
-# litStage Architecture
+# LitSquare Stage Architecture
 
-litStage is split into public runtime code and private renderer hosts.
+LitSquare Stage is split into public runtime packages and compatible render hosts.
 
-The public runtime owns deterministic frame timing, runner lifecycle, browser playback, React bindings, and shared protocol types. It must stay usable in any browser project without a native app or hosted render server.
+The public runtime owns deterministic frame timing, runner lifecycle, browser playback, React bindings, render-host bridge events, and shared protocol types. It must stay usable in any browser project without a bundled renderer, server, native shell, or hosted capture service.
 
-Private renderers consume the public packages and expose the same MCP tool/resource contract:
+Compatible hosts consume the public packages and decide how to load projects, isolate execution, capture pixels, encode media, manage queues, expose progress, and authenticate access.
 
-- `litstage-macos`: local macOS renderer using WKWebView and native export services
-- `litstage-chromium`: remote-capable Chromium renderer using Playwright
+## Public Packages
 
-The shared protocol is intentionally render-focused. Source editing, project scaffolding wizards, comments, inspectors, and UI-heavy WEFT features are not part of the first litStage renderer contract.
+- `@litsquare/stage`: runner, lifecycle, browser preview host, render-host bridge, timing, and audio helpers.
+- `@litsquare/stage-react`: React provider and hooks around the runner.
+- `@litsquare/stage-protocol`: serializable config, render request, job state, artifact, diagnostic, and MCP contract types.
 
+## Boundary
+
+The shared protocol is intentionally render-focused. Source editing, project scaffolding wizards, comments, inspectors, asset hosting, capture engines, and deployment infrastructure are outside the public runtime contract.
