@@ -114,7 +114,7 @@ pnpm build:examples
 
 ## Release
 
-See [Releasing](RELEASING.md) for npm package checks, the first-publish bootstrap, and trusted publishing setup.
+See [Releasing](RELEASING.md) for manual npm.org package checks, publishing, and push steps.
 
 ## Learn More
 
