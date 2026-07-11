@@ -71,10 +71,13 @@ Run the browser preview and inspect:
 - Asset loading.
 - Responsive formats.
 - Motion rhythm.
+- If using the LitSquare Stage MCP app, show and front the native render window in compact mode for still/image inspection.
 
 ## 7. Render
 
 Build, capture stills, render short ranges, then render final video. Use motion blur only after the base render is visually correct.
+
+When rendering through the MCP app, use the native render window as live feedback: compact mode for stills and regular mode for video or long sequence progress.
 
 ## 8. QA
 

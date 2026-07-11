@@ -10,9 +10,9 @@ The workspace root and examples stay private to npm. Publish the packages manual
 
 ## Repository Links
 
-- Public runtime packages: https://github.com/thierryc/litstage
-- Private macOS app: https://github.com/thierryc/litstage-macos
-- Private Chromium renderer: https://github.com/thierryc/litstage-chromium
+- Public runtime packages: https://github.com/thierryc/litsquare-stage
+- Private macOS app: https://github.com/thierryc/litsquare-stage-macos
+- Private Chromium renderer: https://github.com/thierryc/litsquare-stage-chromium
 - Private Codex plugin: local/unpublished repository until a remote is created
 
 ## Local Release Gates
@@ -52,18 +52,18 @@ npm whoami
 4. Pack release tarballs:
 
 ```bash
-mkdir -p /tmp/litstage-npm
-(cd packages/stage-protocol && pnpm pack --pack-destination /tmp/litstage-npm)
-(cd packages/stage && pnpm pack --pack-destination /tmp/litstage-npm)
-(cd packages/stage-react && pnpm pack --pack-destination /tmp/litstage-npm)
+mkdir -p /tmp/litsquare-stage-npm
+(cd packages/stage-protocol && pnpm pack --pack-destination /tmp/litsquare-stage-npm)
+(cd packages/stage && pnpm pack --pack-destination /tmp/litsquare-stage-npm)
+(cd packages/stage-react && pnpm pack --pack-destination /tmp/litsquare-stage-npm)
 ```
 
 5. Publish in dependency order with npm 2FA:
 
 ```bash
-npm publish /tmp/litstage-npm/litsquare-stage-protocol-0.1.0.tgz --access public
-npm publish /tmp/litstage-npm/litsquare-stage-0.1.0.tgz --access public
-npm publish /tmp/litstage-npm/litsquare-stage-react-0.1.0.tgz --access public
+npm publish /tmp/litsquare-stage-npm/litsquare-stage-protocol-0.1.0.tgz --access public
+npm publish /tmp/litsquare-stage-npm/litsquare-stage-0.1.0.tgz --access public
+npm publish /tmp/litsquare-stage-npm/litsquare-stage-react-0.1.0.tgz --access public
 ```
 
 6. Verify npm visibility:

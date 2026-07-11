@@ -11,7 +11,7 @@ Rendering stills, image sequences, or video requires a host that implements the 
 
 ## 1. Install Dependencies
 
-From the `litstage` workspace:
+From the `litsquare-stage` workspace:
 
 ```bash
 pnpm install

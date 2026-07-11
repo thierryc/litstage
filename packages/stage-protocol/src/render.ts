@@ -95,11 +95,20 @@ export interface RenderResult {
   artifacts: RenderArtifact[];
 }
 
+export type RuntimeState = "notChecked" | "loading" | "ready" | "failed";
+
 export interface ServerState {
   name: string;
   version: string;
   endpoint: string;
   projectRoot?: string;
+  /** Present on hosts that distinguish project loading from a verified runtime handshake. */
+  projectLoaded?: boolean;
+  /** Current runtime-handshake lifecycle. */
+  runtimeState?: RuntimeState;
+  /** Last runtime-handshake error, when runtimeState is failed. */
+  runtimeLastError?: string;
+  /** Compatibility boolean derived from runtimeState === "ready" on current hosts. */
   runtimeReady: boolean;
   updatedAt: string;
 }

@@ -14,6 +14,8 @@ This package contains the public TypeScript contract shared by LitSquare Stage p
 
 Use `parseLitSquareStageConfig` to validate `stage.config.json` payloads before a host loads a built project.
 
+`ServerState` distinguishes `projectLoaded` from the verified render-runtime handshake through `runtimeState`; `runtimeReady` remains the compatibility boolean for `runtimeState === "ready"`.
+
 ```ts
 import { parseLitSquareStageConfig } from "@litsquare/stage-protocol";
 

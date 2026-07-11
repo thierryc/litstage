@@ -6,7 +6,7 @@ The current public release line is `0.1.x`.
 
 ## Reporting A Vulnerability
 
-Report security issues privately through GitHub security advisories for `thierryc/litstage`.
+Report security issues privately through GitHub security advisories for `thierryc/litsquare-stage`.
 
 Do not open a public issue for suspected vulnerabilities. Include:
 
